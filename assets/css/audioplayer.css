@@ -1,0 +1,174 @@
+
+#wrapper > section.intro > header > #audio-player-container > button {
+   
+   border: none !important;
+   box-shadow: none !important;
+}
+#audio-player-container {
+  --seek-before-width: 0%;
+    --volume-before-width: 100%;
+    --buffered-width: 0%;
+    position: relative;
+    margin: 50px 2.5% auto 2.5%;
+    width: 95%;
+    max-width: 500px;
+    
+    background:none;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+   
+
+}
+#audio-player-container::before {
+    display: none;
+    position: absolute;
+    content: '';
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+   background: white;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+#play-icon {
+    
+    font-size: 80px;
+    transition: all 0.3s ease-in-out;
+}
+path {
+    stroke: #5D001E;
+}
+.time {
+    display: inline-block;
+    width: 37px;
+    text-align: center;
+    font-size: 15px;
+    margin: 28.5px 0 18.5px 0;
+    /*float: left;*/
+}
+#wrapper > section.intro > header >output {
+    display: inline-block;
+    width: 32px;
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 2.5% 0 5%;
+  /*  float: left;*/
+    clear: left;
+}
+#volume-slider {
+    margin: 10px 2.5%;
+    width: 58%;
+}
+#volume-slider::-webkit-slider-runnable-track {
+    background: #E3E2DF;
+}
+#volume-slider::-moz-range-track {
+    background: #E3E2DF;
+}
+#volume-slider::-ms-fill-upper {
+    background: #E3E2DF;
+}
+#volume-slider::before {
+    width: var(--volume-before-width);
+}
+#mute-icon {
+    margin: 0 2.5%;
+}
+input[type="range"] {
+    position: relative;
+    -webkit-appearance: none;
+    width: 48%;
+    margin: 0;
+    padding: 0;
+    height: 19px;
+    margin: 30px 2.5% 20px 2.5%;
+    float: left;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(0, 125, 181, 0.6) var(--buffered-width), rgba(0, 125, 181, 0.2) var(--buffered-width));
+}
+input[type="range"]::before {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 0;
+    width: var(--seek-before-width);
+    height: 3px;
+    background-color: #E3E2DF;
+    cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+    position: relative;
+    -webkit-appearance: none;
+    box-sizing: content-box;
+    border: 1px solid #E3E2DF;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #E3E2DF;
+    cursor: pointer;
+    margin: -7px 0 0 0;
+}
+input[type="range"]:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+    background: #E3E2DF;
+}
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(0, 125, 181, 0.6) var(--buffered-width), rgba(0, 125, 181, 0.2) var(--buffered-width));
+}
+input[type="range"]::-moz-range-progress {
+    background-color: #E3E2DF;
+}
+input[type="range"]::-moz-focus-outer {
+    border: 0;
+}
+input[type="range"]::-moz-range-thumb {
+    box-sizing: content-box;
+    border: 1px solid #E3E2DF;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #5D001E;
+    cursor: pointer;
+}
+input[type="range"]:active::-moz-range-thumb {
+    transform: scale(1.2);
+    background: #E3E2DF;
+}
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: transparent;
+    border: solid transparent;
+    color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+    background-color: #007db5;
+}
+input[type="range"]::-ms-fill-upper {
+    background: linear-gradient(to right, rgba(0, 125, 181, 0.6) var(--buffered-width), rgba(0, 125, 181, 0.2) var(--buffered-width));
+}
+input[type="range"]::-ms-thumb {
+    box-sizing: content-box;
+    border: 1px solid #E3E2DF;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #5D001E;
+    cursor: pointer;
+}
+input[type="range"]:active::-ms-thumb {
+    transform: scale(1.2);
+    background: #E3E2DF;
+}
